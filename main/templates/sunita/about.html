@@ -1,0 +1,99 @@
+
+{% extends 'nav.html' %}
+{% block aboutactive %}active{% endblock aboutactive %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+
+  <body>
+    {% load static%}
+
+    <div class="all-page-title page-breadcrumb">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>About Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb" style="font-weight: 120px;">
+      <ol class="breadcrumb"  >
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active unique" aria-current="page"  >About</li>
+      </ol>
+      </nav>
+
+
+    <div class="about-section-box">
+      <div class="container" style="padding-top: 50px;">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <img src="{% static 'images/c2.jpg'%}" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-6 col-md-6 text-center">
+            <div class="inner-column">
+              <h1>Welcome To <span>Fashion Durbar</span></h1>
+              <h2 class="unique">Little Story</h2>
+              <p class="unique">Eating out at a restaurant of your choice is always an enjoyable experience. Make it a memorable one by dinning in with us in an ambience that boasts of a 10-year old history located between the religious site, Budhanilkantha temple and Krishna Mandir, where Jhilmil is situated </p>
+              <p class="unique">Customers will relish the beautiful and peace place of Budhanilkantha filled with fresh air and religious atmosphere. </p>
+              <button class="aa-secondary-btn" href="#">SHOP NOW</button>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+    </div> 
+  
+    <div class="container text-center mt-5 mb-2" style="padding-top: 100px;">
+      <h1 class="mb-0">Meet our Team Members</h1><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+  </div>
+  <div class="container mt-3">
+      <div class="row">
+          <div class="col-md-3">
+              <div class="bg-light p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="{% static 'images/a1.jpg'%}" width="90">
+                  <h5 class="mt-3 name">Ashmita Devkota</h5><span class="work d-block">Manager</span><span class="work d-block"><h6>Fashion Durbar</h6></span>
+                  <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                  <div class="mt-4">
+                      <h6 class="v-profile">View Profile</h6>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="bg-light p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="{% static 'images/a1.jpg'%}" width="90">
+                  <h5 class="mt-3 name">Ushnika Shrestha</h5><span class="work d-block">Designer</span><span class="work d-block"><h6>Fashion Durbar</h6></span>
+                  <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                  <div class="mt-4">
+                      <h6 class="v-profile">View Profile</h6>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="bg-light p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="{% static 'images/r2.jpg'%}" width="90">
+                  <h5 class="mt-3 name">Rojina Rai</h5><span class="work d-block">Accountant</span><span class="work d-block"><h6>Fashion Durbar</h6></span>
+                  <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                  <div class="mt-4">
+                      <h6 class="v-profile">View Profile</h6>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="bg-light p-3 text-center rounded box" ><img class="img-responsive rounded-circle" src="{% static 'images/as.jpg'%}" width="90">
+                  <h5 class="mt-3 name">Sabina Kuikel</h5><span class="work d-block">Incharge</span><span class="work d-block"><h6>Fashion Durbar</h6></span>
+                  <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
+                  <div class="mt-4">
+                      <h6 class="v-profile">View Profile</h6>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+   
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+  	
+ 
+  </body>
+</html>
+{% endblock body%}

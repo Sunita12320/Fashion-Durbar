@@ -1,0 +1,470 @@
+{% extends 'nav.html' %}
+{% block homeactive %}active{% endblock homeactive %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+ 
+  <body>
+    {% load static%}
+    <!--Home slider-->
+    <section id="home" class="home ppt-5 overflow-hidden">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+ 
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="home-banner home-banner-1">
+              <div class="home-banner-text">
+                <h1>Women</h1>
+                <h2>52% Discount for this season</h2>
+                <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="home-banner home-banner-2">
+              <div class="home-banner-text">
+                <h1>E-shop</h1>
+                <h2>Have a happy shopping!!</h2>
+                <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+              </div>
+
+            </div>
+          </div>
+         
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <i class="fa fa-chevron-left"></i>
+          </span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <i class="fa fa-chevron-right"></i>
+          </span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </section>
+    <!--Sale offer-->
+    <div class="offers">
+      <div class="container">
+        <div class="row">
+          <!--Box one-->
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-4">
+            <a href="#">
+              <div class="offer-box text-center position-relative">
+                <div class="offer-inner">
+                  <div class="offer-image position-relative overflow-hidden">
+                    <img src="{% static 'images/pZ.jpg'%}" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay">
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <p class="heading-bigger text-capitalize">Sale 35%</p>
+                        <p class="offer-title-1 text-uppercase font-weight-bold">Don't Miss The Chance</p>
+                        <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                      </div>
+                   
+                    </div>
+
+                  </div>
+
+                </div>
+                
+
+              </div>
+            </a>
+
+          </div>
+          <!--Box two-->
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-4 d-flex flex-column justify-content-between">
+            <a href="#">
+              <div class="offer-box text-center position-relative mb-4 mb-sm-0 mb-lg-0">
+                <div class="offer-inner">
+                  <div class="offer-image position-relative overflow-hidden">
+                    <img src="{% static 'images/p3.jpg'%}" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay">
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <p class="heading-bigger text-capitalize">Sale 55%</p>
+                        <p class="offer-title-1 text-uppercase font-weight-bold">Don't Miss The Chance</p>
+                        <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                      </div>
+                   
+                    </div>
+
+                  </div>
+
+                </div>
+                
+
+              </div>
+            </a>
+            <a href="#">
+              <div class="offer-box text-center position-relative ">
+                <div class="offer-inner">
+                  <div class="offer-image position-relative overflow-hidden">
+                    <img src="{% static 'images/p5.jpg'%}" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay">
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <p class="heading-bigger text-capitalize">Sale 25%</p>
+                        <p class="offer-title-1 text-uppercase font-weight-bold">Don't Miss The Chance</p>
+                        <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                      </div>
+                   
+                    </div>
+
+                  </div>
+
+                </div>
+                
+
+              </div>
+            </a>
+
+          </div>
+          <!--Box three-->
+          <div class="col-sm-6 col-lg-4 mb-lg-0 mb-4">
+            <a href="#">
+              <div class="offer-box text-center position-relative">
+                <div class="offer-inner">
+                  <div class="offer-image position-relative overflow-hidden">
+                    <img src="{% static 'images/p9.jpg'%}" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay">
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <p class="heading-bigger text-capitalize">Sale 70%</p>
+                        <p class="offer-title-1 text-uppercase font-weight-bold">Don't Miss The Chance</p>
+                        <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                      </div>
+                   
+                    </div>
+
+                  </div>
+
+                </div>
+                
+
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <section class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="headline text-center mb-5">
+              <h2 class="pb-3 position-relative d-inline-block">FEATURE PRODUCTS</h2>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 " style="padding-left: 50px;" >
+            <div class="card" style="width: 16rem; height: auto;">
+              <img src="{% static 'images/jk2.jpg'%}" class="card-img-top" alt="...">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary"
+                title="Quick Shop"> <i class="fa fa-eye"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Wish list"> <i class="fa fa-heart-o"></i>
+                 </button>
+    
+              </div>
+              <div class="card-body text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <h5 class="card-title">Jeans Jacket</h5>
+                <p class="card-text">Rs. 1200</p>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/about" style="color:white; text-decoration: none;">View Product</a></button>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/cart" style="color:white; text-decoration: none;">Cart<i class="fa fa-shopping-cart"></i></a></button>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 " style="padding-left: 50px;" >
+            <div class="card" style="width: 16rem; height: auto;">
+              <img src="{% static 'images/jk2.jpg'%}" class="card-img-top" alt="...">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary"
+                title="Quick Shop"> <i class="fa fa-eye"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Wish list"> <i class="fa fa-heart-o"></i>
+                 </button>
+    
+              </div>
+              <div class="card-body text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <h5 class="card-title">Jeans Jacket</h5>
+                <p class="card-text">Rs. 1200</p>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/about" style="color:white; text-decoration: none;">View Product</a></button>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/cart" style="color:white; text-decoration: none;">Cart<i class="fa fa-shopping-cart"></i></a></button>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 " style="padding-left: 50px;" >
+            <div class="card" style="width: 16rem; height: auto;">
+              <img src="{% static 'images/jk2.jpg'%}" class="card-img-top" alt="...">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary"
+                title="Quick Shop"> <i class="fa fa-eye"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Wish list"> <i class="fa fa-heart-o"></i>
+                 </button>
+    
+              </div>
+              <div class="card-body text-center">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <h5 class="card-title">Jeans Jacket</h5>
+                <p class="card-text">Rs. 1200</p>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/about" style="color:white; text-decoration: none;">View Product</a></button>
+                <button type="button" class="btn btn-dark btn-sm"><a href="/cart" style="color:white; text-decoration: none;">Cart<i class="fa fa-shopping-cart"></i></a></button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </section>
+
+    <section id="banner" class="my-5 py-5">
+<div class="container">
+  <h4><br>Fashion is about dressing according to <br><br>what's fashionable. Style is more about being yourself."</h4>
+  <h5> <br>- Oscar de la Renta</h5>
+</div>
+    </section>
+
+    <section class="product pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="headline text-center mb-5">
+              <h2 class="pb-3 position-relative d-inline-block">TRENDING PRODUCTS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row owl-carousel owl-theme">
+          {% for item in trending_products %} 
+            <div class=" my-3 product_data item">
+              <div class="card" style="width: 16rem;">
+                  <a href="{% url 'productview' item.category.slug item.slug %}" style="text-decoration: none; color:black">
+                    <img src="{{item.product_image.url}}" class="card-img-top" alt="Product image">
+                       <div class="card-body text-center">
+                        <h5 class="card-title" >{{ item.name}}</h5>
+                  </a>
+                        <span class="float-start">Price: Rs.{{item.price}}</span>
+                        <br>
+                        <div class="row mt-2">
+                          <div class="col-md-6">
+                            {% csrf_token %}
+                            <input type="hidden" value ="{{item.id}}" class="prod_id">
+                            
+                            <div class="input-group text-center mb-3" style="width:110px" >
+                              <button class="input-group-text decrement-btn">-</button>
+                              <input type="text" name="quantity" class="form-control qty-input text-center"style="font-size:12px" value="1">
+                              <button class="input-group-text increment-btn">+</button>
+                            </div>
+                          </div>
+                          <div class="col-md-6 px-0">
+                            <span >
+                          
+                              {% if item.quantity > 0 %}
+                                     <button type="button" class="btn btn-dark btn-sm mb-1 addToCartBtn py-2 " >Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                              {% else %}
+                                     <button type="button" class="btn btn-danger btn-sm py-2 disabled" >Out of Stock</button>
+                              {% endif %}
+                            </span>
+                          </div>
+                        </div>
+                       
+                   
+                       </div>
+                  </a>
+               </div>
+          </div>
+          {% endfor %}
+
+         
+            
+          
+        </div>
+
+        <section class="product">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="headline text-center mb-5">
+                  <h2 class="pb-3 position-relative d-inline-block">FEATURE PRODUCTS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-lg-4 " >
+              <div class="product-top position-relative">
+                <p style="text-align:center;"><img src="{% static 'images/jk1.jpg'%}" alt="jacket"></p>
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary"
+                title="Quick Shop"> <i class="fa fa-eye"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                <button type="button" class="btn btn-secondary"
+                title="Wish list"> <i class="fa fa-heart-o"></i>
+                 </button>
+    
+              </div>
+              </div>
+           
+    
+              <div class="product-bottom text-center" >
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <h3>Jeans Jacket</h3>
+                <h5>Rs. 1200</h5>
+              </div>
+              </div>
+    
+              <div class="col-sm-6 col-lg-4 " >
+                <div class="product-top position-relative">
+                  <p style="text-align:center;"><img src="{% static 'images/jk1.jpg'%}" alt="jacket"></p>
+                  <div class="overlay">
+                    <button type="button" class="btn btn-secondary"
+                    title="Quick Shop"> <i class="fa fa-eye"></i>
+                    <button type="button" class="btn btn-secondary"
+                    title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                    <button type="button" class="btn btn-secondary"
+                    title="Wish list"> <i class="fa fa-heart-o"></i>
+                     </button>
+      
+                  </div>
+                </div>
+      
+                <div class="product-bottom text-center">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                  <i class="fa fa-star-o"></i>
+                  <h3>Jeans Jacket</h3>
+                  <h5>Rs. 1200</h5>
+                </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-4 " >
+                  <div class="product-top position-relative">
+                    <p style="text-align:center;"><img src="{% static 'images/jk1.jpg'%}" alt="jacket"></p>
+                    <div class="overlay">
+                      <button type="button" class="btn btn-secondary"
+                      title="Quick Shop"> <i class="fa fa-eye"></i>
+                      <button type="button" class="btn btn-secondary"
+                      title="Add to cart"> <i class="fa fa-shopping-cart"></i>
+                      <button type="button" class="btn btn-secondary"
+                      title="Wish list"> <i class="fa fa-heart-o"></i>
+                       </button>
+        
+                    </div>
+                  </div>
+        
+                  <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>Jeans Jacket</h3>
+                    <h5>Rs. 1200</h5>
+                  </div>
+                  </div>
+            </div>
+    
+            
+          </div>
+        </section>
+
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="brands-center container" style="padding-top: 100px;">
+        <div class="row">
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand1.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand2.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand1.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand2.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand1.png'%}" alt="" />
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="brand">
+              <img src="{% static 'images/brand2.png'%}" alt="" />
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+  
+    
+ 
+ 
+  </body>
+</html>
+{% endblock body%}

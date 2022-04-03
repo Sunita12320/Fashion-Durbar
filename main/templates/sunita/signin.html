@@ -1,0 +1,66 @@
+{% extends 'nav.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body id="body">
+  {% load static%}
+     <section class="Form my-5 mx-5">
+        <div class="container" style="margin-left: 120px;">
+          <div class="row no-gutters" id="form-row1">
+            <div class="col-lg-5">
+              <img src="{% static 'images/log.jpg'%}" alt="login image">
+              <a href="/register" class="login-image-link">Create an account</a>
+            </div>
+            <div class="col-lg-7 px-5 py-5">
+              <h1 class="font-weight-bold px-5 py-3" >Login</h1>
+              <form action="/login" method="POST" style="padding-left: 50px;">
+                {% csrf_token %} 
+                <div class="form-row" >
+                  <div class="col-lg-9 my-4 py-2" id="box">
+                    <label for="name" ><i class="fa fa-user"></i></label>
+                    <input type="text" name="loginname" id="loginname" placeholder="Your Name" required/>
+                  </div>
+                </div>
+  
+                  <div class="form-row">
+                    <div class="col-lg-9 my-4 py-2" id="box">
+                      <label for="pass"><i class="fa fa-lock"></i></label>
+                      <input type="password" name="loginpass" id="loginpass" placeholder="Password" required/>
+                    </div>
+                  </div>
+                
+                  <div class="form-row">
+                    <div class="col-lg-9 my-4 py-2" id="box1">
+                      <input type="checkbox" id="remember-me" name="remember-me" value="remember-me">
+                      <label for="remember-me"> Remember me</label>
+                    </div>
+                  </div>
+               
+  
+                  <div class="form-row">
+                    <div class="col-lg-3 my-4 py-2">
+                 
+                 <div class="form-group form-button" >
+                  <input type="submit" name="login" id="login" class="form-submit"   value="Login"/>
+              </div>
+                    </div>
+                  </div>  
+  
+                </div>
+              </form>
+            </div>
+          
+          </div>
+        </div>
+  
+      </section>   
+  
+    
+
+    <!-- JS -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    
+</body>
+</html>
+{% endblock body%}

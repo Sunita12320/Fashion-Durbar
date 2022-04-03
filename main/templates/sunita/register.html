@@ -1,0 +1,77 @@
+{% extends 'nav.html' %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+ 
+  <body id="body">
+    {% load static%}
+  
+        <section class="Form my-5 mx-5">
+            <div class="container" style="margin-left: 120px;">
+              <div class="row no-gutters" id="form-row">
+                <div class="col-lg-7 px-5 py-5">
+                  <h1 class="font-weight-bold px-5 py-3" >Sign Up</h1>
+                  <form action="/signup" method="POST" style="padding-left: 50px;">
+                    
+                    <div class="form-row" >
+                      <div class="col-lg-9 my-3 py-2" id="box">
+                        <label for="name" ><i class="fa fa-user"></i></label>
+                        <input type="text" name="name" id="name" placeholder="User Name" required/>
+                      </div>
+                    </div>
+    
+                    <div class="form-row">
+                      <div class="col-lg-9 my-3 py-2" id="box">
+                        <label for="email"><i class="fa fa-envelope"></i></label>
+                        <input type="email" name="email" id="email"  placeholder="Your Email" required/>
+                      </div>
+    
+                      <div class="form-row">
+                        <div class="col-lg-9 my-3 py-2" id="box">
+                          <label for="phone"><i class="fa fa-phone-square"></i></label>
+                          <input type="tel" name="phone" id="phone"  pattern="[0-9]{10}" placeholder="Your Phone Number" required="Please include 10 digits"/>
+                        </div>
+                      </div>
+    
+                      <div class="form-row">
+                        <div class="col-lg-9 my-3 py-2" id="box">
+                          <label for="pass1"><i class="fa fa-lock"></i></label>
+                          <input type="password" name="pass1" id="pass1" placeholder="Password" required/>
+                        </div>
+                      </div>
+                      
+                      <div class="form-row">
+                        <div class="col-lg-9 my-3 py-2" id="box">
+                          <label for="pass2"><i class="fa fa-lock"></i></label>
+                                  <input type="password" name="pass2" id="pass2"  placeholder="Repeat your password" required/>
+                        </div>
+                      </div>
+    
+                      <div class="form-row">
+                        <div class="col-lg-4 my-3 py-2">
+                      {% csrf_token %}
+           
+                     <div class="form-group form-button" >
+                      <input type="submit" name="signup" id="signup" class="form-submit"   value="Register"/>
+                  </div>
+                        </div>
+                      </div>  
+    
+                    </div>
+                  </form>
+                </div>
+                <div class="col-lg-5">
+                  <img src="{% static 'images/signup.jpg'%}" alt="signup image">
+                  <a href="/login" class="signup-image-link">Already have an account?</a>
+                </div>
+              </div>
+            </div>
+    
+          </section>
+
+    <!-- JS -->
+    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    
+</body>
+</html>
+{% endblock body%}
