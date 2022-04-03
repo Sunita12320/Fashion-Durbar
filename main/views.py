@@ -7,6 +7,8 @@ from django.contrib.auth import authenticate, login, logout
 import re
 from django.conf import urls
 from matplotlib.style import context
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from .models import *
 def index(request):
     # products = FeatureProduct.objects.all()
@@ -46,7 +48,8 @@ def productview(request, cat_slug, prod_slug):
         messages.error(request, "No such category found")
         return redirect('/collection')
     return render(request, "sunita/product/productview.html",context)
-      
+
+   
 def addtocart(request):
     if request.method == 'POST':
         if request.user.is_authenticated:
@@ -72,7 +75,7 @@ def addtocart(request):
                 return JsonResponse({'status':"No such product found"})
         
         else:
-            return JsonResponse({'status':"Login to Continue"})
+            return JsonResponse({'status':"Please proceed to login!!"})
     return redirect('/')
 
 def about(request):
