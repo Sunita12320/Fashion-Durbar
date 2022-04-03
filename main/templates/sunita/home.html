@@ -20,7 +20,7 @@
               <div class="home-banner-text">
                 <h1>Women</h1>
                 <h2>52% Discount for this season</h2>
-                <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+                <a href="/collection" class="btn btn-success ourpd text-uppercase mt-4">Our Products</a>
               </div>
 
             </div>
@@ -30,7 +30,7 @@
               <div class="home-banner-text">
                 <h1>E-shop</h1>
                 <h2>Have a happy shopping!!</h2>
-                <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+                <a href="/collection" class="btn btn-success ourpd text-uppercase mt-4">Our Products</a>
               </div>
 
             </div>
@@ -282,12 +282,13 @@
         <div class="row owl-carousel owl-theme">
           {% for item in trending_products %} 
             <div class=" my-3 product_data item">
-              <div class="card" style="width: 16rem;">
+              <div class="card" style="width: 16rem; margin-left: 50px;">
                   <a href="{% url 'productview' item.category.slug item.slug %}" style="text-decoration: none; color:black">
                     <img src="{{item.product_image.url}}" class="card-img-top" alt="Product image">
                        <div class="card-body text-center">
                         <h5 class="card-title" >{{ item.name}}</h5>
                   </a>
+                        <p class="card-title" style="text-align: left;" >Category : {{ item.category}}</p>
                         <span class="float-start">Price: Rs.{{item.price}}</span>
                         <br>
                         <div class="row mt-2">

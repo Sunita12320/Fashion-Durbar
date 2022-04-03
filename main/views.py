@@ -1,3 +1,4 @@
+import json
 from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
@@ -49,7 +50,29 @@ def productview(request, cat_slug, prod_slug):
         return redirect('/collection')
     return render(request, "sunita/product/productview.html",context)
 
-   
+def productlistAjax(request):
+    products = Product.objects.filter(status=0).values_list('name', flat=True)
+    productList = list(products)
+
+    return JsonResponse(productList, safe=False)
+
+def searchproduct(request):
+    if request.method == 'POST':
+        searchedterm = request.POST.get('productsearch')
+        if searchedterm == "":
+            return redirect(request.META.get('HTTP_REFERER'))
+        else:
+            product = Product.objects.filter(name__contains=searchedterm).first()
+
+            if product:
+                return redirect('collection/'+product.category.slug+'/'+product.slug)
+            else:
+                messages.info(request,"No product matched your search")
+                return redirect(request.META.get('HTTP_REFERER')) 
+
+
+    return redirect(request.META.get('HTTP_REFERER'))   
+
 def addtocart(request):
     if request.method == 'POST':
         if request.user.is_authenticated:
@@ -230,4 +253,8 @@ def handleLogout(request):
     return HttpResponse('handleLogout')
 
    
-    
+def success(request):
+    return render(request, 'sunita/success.html')
+
+def token_send(request):
+    return render(request, 'sunita/token_send.html')

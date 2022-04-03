@@ -43,7 +43,16 @@ padding:0;
     border-color: #9325b2;
     background-color:#9325b2 ;
 }
-
+.ourpd{
+    color: white;
+    border-color: #9325b2;
+    background-color:#9325b2 ;  
+}
+.ourpd:hover {
+    color: #9325b2;
+    border-color: #9325b2;
+    background-color: transparent;
+}
 /* #home{
     padding-top: 5px;   
 } */

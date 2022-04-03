@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
   <!-- Default theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+  <!-- jQuerry Autocomplete -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
    
     <title>Fashion Durbar</title>
   </head>
@@ -99,8 +101,9 @@
            
               
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search for..." aria-label="Search" >
+            <form action="{% url 'searchproduct' %}" method="POST" class="d-flex">
+              {% csrf_token %}
+              <input class="form-control me-2" name="productsearch" type="search" id="searchproducts" placeholder="Search for..." required aria-label="Search" >
               <button class="btn btn-outline-success" type="submit" border-color="#9325b2">Search</button>
             </form>
             
@@ -183,7 +186,29 @@
     <!--Custom-->
     <script src="{% static '/js/custom.js'%}"></script>
     <script src="{% static '/js/owl.carousel.min.js'%}"></script>
+    <!--Autosearch jquerry-->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+     
+    var availableTags = [];
+    $.ajax({
+      method:"GET",
+      url:"/product-list",
+      success: function(response){
+        // console.log(response);
+        // availableTags = response;
+        startAutocomplete(response);
+      }
+    });
+    function startAutocomplete(availableTags){
+
+      $( "#searchproducts" ).autocomplete({
+      source: availableTags
+    });
+
+    }
     
+    </script>
     <!--Alertify JS-->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>

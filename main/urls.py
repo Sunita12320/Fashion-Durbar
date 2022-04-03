@@ -9,6 +9,8 @@ urlpatterns =[
     path('collection',views.collection, name='collection'),
     path('collection/<str:slug>', views.collectionview, name="collectionview"),
     path('collection/<str:cat_slug>/<str:prod_slug>', views.productview, name="productview"),
+    path('product-list', views.productlistAjax),
+    path('searchproduct',views.searchproduct, name='searchproduct'),
     path('about',views.about, name='about'),
     path('cart',views.viewcart, name='cart'),
     path('update-cart',views.updatecart, name='updatecart'),
@@ -20,4 +22,7 @@ urlpatterns =[
     path('login',views.handleLogin, name='handleLogin'),
     path('logout',views.handleLogout, name='handleLogout'),
     path('add-to-cart',views.addtocart, name='addtocart'),
+    path('token', views.token_send, name='token_send'),
+    path('success', views.success, name='success'),
+
 ]

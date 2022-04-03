@@ -37,7 +37,7 @@
                                 <a href="" style="text-decoration: none; color:black" >
                                    <img src="{{item.product_image.url}}" class="card-img-top" alt="Product image">
                                       <div class="card-body text-center">
-                                       <h5 class="card-title">Product: {{ item.name}}</h5>
+                                       <h5 class="card-title"> {{ item.name}}</h5>
                                        <p class="card-text">Price: Rs.{{item.price}}</p>
                                        <p></p>
                                        <button type="button" class="btn btn-dark"><a href="{% url 'productview' item.category.slug item.slug %}" style="color:white; text-decoration: none; padding-top: 10px;">View Product</a></button>
