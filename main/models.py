@@ -5,6 +5,18 @@ from django.dispatch import receiver
 from .make_slug import unique_slug_generator
 from django.db.models.signals import pre_save
 # Create your models here.
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    forget_password_token = models.CharField(max_length=100)
+    auth_token = models.CharField(max_length=100)
+    is_verified = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.user.username
+
+
 class FeatureProduct(models.Model):
     product_id=models.AutoField
     product_name=models.CharField(max_length=50)
@@ -54,4 +66,16 @@ class Cart(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     product_qty = models.IntegerField(null=False, blank=False)
 
-    
+# class Order(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     fname = models.CharField(max_length=150, null=False)
+#     lname = models.CharField(max_length=150, null=False)
+#     email = models.CharField(max_length=150, null=False)
+#     phone = models.CharField(max_length=150, null=False)
+#     address = models.TextField(null=False)
+#     city = models.CharField(max_length=150, null=False)
+#     country = models.CharField(max_length=150, null=False)
+#     total_price = models.FloatField(null=False)
+#     payment_mode = models.CharField(max_length = 150, null = False)
+#     payment_id = models.CharField(max_length=250, null = True)
+#     status = models.CharField(max_length =150, choices =)

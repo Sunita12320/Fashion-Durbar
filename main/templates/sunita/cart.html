@@ -12,7 +12,7 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Our Collections</h1>
+            <h1>Cart Page</h1>
           </div>
         </div>
       </div>
@@ -31,10 +31,10 @@
                   <div class="row">
                     <div class="card mb-3 cartdata" style="max-width: 940px; margin-top:50px; margin-left: 100px;  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.02);">
                    {% if cart %}
-                   {{cart}}
+                   
                         {%for item in cart %}
                            <div class="row product_data">
-                           <div class = "col-md-2 my-auto">
+                           <div class = "col-md-2 mt-2">
                                <img src="{{item.product.product_image.url}}" height="80px" width="80px" alt="Image of product">
                            </div>
                             <div class="col-md-3 my-auto">
@@ -62,6 +62,7 @@
                             </div>
                             </div>
                         {% endfor %}
+                        <a href="/checkout" class="btn btn-success my-3" style="width:150px; ">  Checkout</a>
                    {% else %}
                         <h4>Your cart is empty</h4>
                    {% endif %}

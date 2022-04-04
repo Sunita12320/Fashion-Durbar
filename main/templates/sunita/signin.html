@@ -18,17 +18,21 @@
                 {% csrf_token %} 
                 <div class="form-row" >
                   <div class="col-lg-9 my-4 py-2" id="box">
-                    <label for="name" ><i class="fa fa-user"></i></label>
+                    <label for="name" ><i class="fa fa-user"></i></label>&nbsp;&nbsp;
                     <input type="text" name="loginname" id="loginname" placeholder="Your Name" required/>
                   </div>
                 </div>
   
                   <div class="form-row">
                     <div class="col-lg-9 my-4 py-2" id="box">
-                      <label for="pass"><i class="fa fa-lock"></i></label>
+                      <label for="pass"><i class="fa fa-lock"></i></label>&nbsp;&nbsp;
                       <input type="password" name="loginpass" id="loginpass" placeholder="Password" required/>
                     </div>
                   </div>
+
+                  <a href="/forget-password" style="color:black; padding-left: 20px; ">Forget Password?</a>
+                  
+                  
                 
                   <div class="form-row">
                     <div class="col-lg-9 my-4 py-2" id="box1">
@@ -55,11 +59,7 @@
         </div>
   
       </section>   
-  
-    
 
-    <!-- JS -->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
     
 </body>
 </html>
